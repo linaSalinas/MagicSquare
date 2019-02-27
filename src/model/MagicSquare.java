@@ -76,13 +76,13 @@ public class MagicSquare {
 			rowAnterior = rowActual;
 			colAnterior = colActual;	
 			
-			    if(direction.equals(N_O) || direction.equals(S_O)) {
+			    if(direction.equals(N_O) || direction.equals(S_E)) {
 				
 				rowActual -=1; 
 				
 				}
 				
-			    else if(direction.equals(N_E) || direction.equals(S_E)) {
+			    else if(direction.equals(N_E) || direction.equals(S_O)) {
 			    
     			    rowActual ++;
                 }
@@ -98,12 +98,12 @@ public class MagicSquare {
 			    	
 			    }
 
-				if(direction.equals(N_O) || direction.equals(S_O)) {
+				if(direction.equals(N_O) || direction.equals(N_E)) {
 					
 					colActual -=1;
 				}
 				
-				else if(direction.equals(N_E) || direction.equals(S_E)) {
+				else if(direction.equals(S_O) || direction.equals(S_E)) {
 					
 					colActual -=1;
 				}
