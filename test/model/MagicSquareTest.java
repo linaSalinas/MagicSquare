@@ -26,7 +26,7 @@ class MagicSquareTest {
 		MagicSquare newMagicSquare = new MagicSquare();
 		int order = 3;
 		for (int i = 1; i< order; i++) {
-			//	for (int j =1; j< order[i].length; j++ ) {
+				System.out.println("Hola Mundo");
 
 		}
 	}
