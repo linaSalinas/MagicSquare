@@ -36,9 +36,9 @@ public class MagicSquareController {
 
 	private MagicSquare magicS;
 
-	@FXML
-	public void initialize() {
-		magicS = new MagicSquare(); 
+	
+	public void init() {
+		magicS = new MagicSquare(Integer.parseInt(txtOrder.getText())); 
 
 	}
 //____________________________________________________________________________________________________________________________________
@@ -67,7 +67,7 @@ public class MagicSquareController {
 		
 		}
 
-			
+		init();	
 		magicS.setOrder(order);
 		directionMatrix();
 

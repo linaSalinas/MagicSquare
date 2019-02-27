@@ -3,6 +3,7 @@ package model;
 public class MagicSquare {
 	
 	private int [][] matrix;
+	private int order;
 
 	public final static String UPPER_CENTRAL = "U";
 	public final static String CENTRAL_SIDE = "L";
@@ -15,12 +16,13 @@ public class MagicSquare {
 	public final static String S_E = "s.e";
 //_______________________________________________________________________________________________________________________________	
 
-	public MagicSquare() {
-		
+	public MagicSquare(int order) {
+		//this.order = order;
 	}
 //_______________________________________________________________________________________________________________________________	
 
 	public void setOrder(int order) {
+		
 		
 		matrix = new int [order][order];
 		
@@ -74,13 +76,13 @@ public class MagicSquare {
 			rowAnterior = rowActual;
 			colAnterior = colActual;	
 			
-			    if(direction.equals(N_O) || direction.equals(N_E)) {
+			    if(direction.equals(N_O) || direction.equals(S_O)) {
 				
 				rowActual -=1; 
 				
 				}
 				
-			    else if(direction.equals(S_O) || direction.equals(S_E)) {
+			    else if(direction.equals(N_E) || direction.equals(S_E)) {
 			    
     			    rowActual ++;
                 }
@@ -103,7 +105,7 @@ public class MagicSquare {
 				
 				else if(direction.equals(N_E) || direction.equals(S_E)) {
 					
-					colActual ++;
+					colActual -=1;
 				}
 				
                 if(colActual <0) {
