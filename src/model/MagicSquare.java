@@ -17,20 +17,12 @@ public class MagicSquare {
 //_______________________________________________________________________________________________________________________________	
 
 	public MagicSquare(int order) {
-		//this.order = order;
-	}
-//_______________________________________________________________________________________________________________________________	
-
-	public void setOrder(int order) {
-		
-		
 		matrix = new int [order][order];
-		
 	}
 	
 //_______________________________________________________________________________________________________________________________	
 
-	public void fillMatrix(String direction, String location){
+	public int [][] fillMatrix(String direction, String location){
 		
 		int tamano = matrix.length;
 		int position = tamano/2;
@@ -76,13 +68,13 @@ public class MagicSquare {
 			rowAnterior = rowActual;
 			colAnterior = colActual;	
 			
-			    if(direction.equals(N_O) || direction.equals(S_E)) {
+			    if(direction.equals(N_O) || direction.equals(N_E) || direction.equals(S_O)) {
 				
 				rowActual -=1; 
 				
 				}
 				
-			    else if(direction.equals(N_E) || direction.equals(S_O)) {
+			    else if(direction.equals(S_E) ) {
 			    
     			    rowActual ++;
                 }
@@ -98,12 +90,12 @@ public class MagicSquare {
 			    	
 			    }
 
-				if(direction.equals(N_O) || direction.equals(N_E)) {
+				if(direction.equals(N_O) || direction.equals(S_E)) {
 					
 					colActual -=1;
 				}
 				
-				else if(direction.equals(S_O) || direction.equals(S_E)) {
+				else if(direction.equals(S_O) || direction.equals(N_E)) {
 					
 					colActual -=1;
 				}
@@ -126,6 +118,8 @@ public class MagicSquare {
                 }
                 matrix [rowActual][colActual] = i+1;
 			}
+		return matrix;
+		
 	
 		}
 //_______________________________________________________________________________________________________________________________________

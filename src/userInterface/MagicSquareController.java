@@ -68,7 +68,6 @@ public class MagicSquareController {
 		}
 
 		init();	
-		magicS.setOrder(order);
 		directionMatrix();
 
 		if(matrixInicial != null) {
@@ -93,22 +92,7 @@ public class MagicSquareController {
 	}
 //___________________________________________________________________________________________________________________________
 	
-	public void clearMatrix(){
 
-		for (int i = 0; i < matrixInicial.length; i++) {
-
-			for (int j = 0; j < matrixInicial[i].length; j++) {
-				if(matrixInicial[i][j] != null) {
-					matrixInicial[i][j].setText("");
-				}
-
-			}
-		}
-
-	}
-
-	//_______________________________________________________________________________________________________________________
-	
 	public void directionMatrix() {
 
 		String location = combLocation.getSelectionModel().getSelectedItem();
@@ -149,5 +133,20 @@ public class MagicSquareController {
 			System.err.println(nullPointer.getMessage());
 		}
 	}
+	public void clearMatrix(){
 
+		for (int i = 0; i < matrixInicial.length; i++) {
+
+			for (int j = 0; j < matrixInicial[i].length; j++) {
+				if(matrixInicial[i][j] != null) {
+					matrixInicial[i][j].setText("");
+				}
+
+			}
+		}
+
+	}
+
+	//_______________________________________________________________________________________________________________________
+	
 }
